@@ -163,4 +163,11 @@ void draw() {
   updatePixels();
 }
 
+void swap(int x, int y, int xc, int yc) {
+//  if (x+(y*width) < width*height && xc+(yc*width) < width*height && xc+(yc*width) > -1) {
+    color c = pixels[x+(y*width)];
+    pixels[x+(y*width)] =  pixels[xc+(yc*width)];
+    pixels[xc+((yc)*width)] = c;
+//  }
+}
 
